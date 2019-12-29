@@ -24,7 +24,6 @@ public class MyView extends View {
     public MyView(Context context, @Nullable AttributeSet attributeSet) {
         super(context, attributeSet);
         setBackgroundColor(Color.BLUE);
-
     }
 
     public void onSizeChanged(int w, int h, int oldw, int oldh) {
@@ -45,7 +44,7 @@ public class MyView extends View {
         MainActivity.checkMin(); // 시간이 얼마나 지났는지 체크하는 메소드를 호출한다.
 
         // 무작위로 정한 시간이 되어 폭탄이 터지게 된다.
-        if (MainActivity.lapseMin >= MainActivity.randomMin) {
+        if (MainActivity.randomMin <= MainActivity.lapseMin) {
             canvas.drawBitmap(bomb3, 50, 150, null);
             canvas.drawText("폭탄 터진 시간: " + MainActivity.randomMin + "초", 100, 150, p);
 

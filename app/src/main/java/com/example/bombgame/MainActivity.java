@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         // 시계 째깍째깍 소리
         backMusic = MediaPlayer.create(this, R.raw.crack);
         backMusic.setLooping(true); // 노래를 무한반복으로 나오게 하기
+        backMusic.start();
 
         // 게임 시작 버튼
         startButton.setOnClickListener(new View.OnClickListener() {
